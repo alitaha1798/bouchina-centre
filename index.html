@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مركز الطاهر بوشينة | للتعليم والتطوير والتدريب والاستشارات</title>
+<meta name="description" content="مركز الطاهر بوشينة للتعليم والتطوير والتدريب والاستشارات، خرايسية، طريق الدويرة. الدعم المدرسي، الاستشارات النفسية والتوجيه، الأرطوفونيا وصعوبات التعلم، تعليم اللغات، التكوين والتدريب.">
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#6d28d9; --primary-dark:#4c1d95; --gold:#c9a24a; --ink:#1e293b; --muted:#64748b;
+  --bg:#faf8fd; --soft:#f3eefe; --soft2:#f7efdc;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+
+/* Header */
+header{position:fixed;top:0;right:0;left:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(76,29,149,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:1.1rem;color:var(--primary-dark)}
+.logo img{width:54px;height:54px;object-fit:contain}
+.logo small{display:block;font-weight:700;font-size:.72rem;color:var(--muted)}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-links a{font-weight:700;font-size:.97rem;transition:.25s}
+.nav-links a:hover{color:var(--primary)}
+.cta-btn{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff!important;padding:10px 22px;border-radius:30px;box-shadow:0 6px 18px rgba(109,40,217,.3)}
+.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;color:var(--primary-dark);cursor:pointer}
+
+/* Hero */
+.hero{padding:110px 0 50px;background:linear-gradient(160deg,var(--soft) 0%,var(--bg) 55%,var(--soft2) 100%)}
+.hero-banner{border-radius:22px;overflow:hidden;box-shadow:0 20px 45px rgba(76,29,149,.2);border:4px solid #fff}
+.hero-banner img{width:100%;height:auto}
+.hero-text{text-align:center;margin-top:34px}
+.hero-text h1{font-size:clamp(1.6rem,4vw,2.5rem);font-weight:900;line-height:1.5}
+.hero-text h1 span{color:var(--primary)}
+.hero-text p{color:var(--muted);font-size:1.1rem;margin:8px 0 24px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.btn{padding:14px 32px;border-radius:32px;font-weight:800;font-size:1rem;display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:inherit;transition:.25s}
+.btn-main{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;box-shadow:0 8px 22px rgba(109,40,217,.35)}
+.btn-main:hover{transform:translateY(-3px)}
+.btn-ghost{background:#fff;color:var(--primary-dark);border:2px solid var(--primary)}
+.btn-ghost:hover{background:var(--soft)}
+
+/* Sections */
+section{padding:80px 0}
+.sec-title{text-align:center;margin-bottom:48px}
+.sec-title .kicker{color:var(--gold);font-weight:800}
+.sec-title h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:900;margin-top:4px}
+.sec-title p{color:var(--muted);max-width:620px;margin:10px auto 0}
+
+/* About */
+.about-box{max-width:850px;margin:auto;background:#fff;border-radius:22px;padding:34px;box-shadow:0 12px 34px rgba(76,29,149,.08);border-top:5px solid var(--gold);text-align:center}
+.about-box p{color:var(--muted);font-size:1.05rem}
+.verse{display:inline-block;margin-top:22px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;border:2px solid var(--gold);border-radius:18px;padding:12px 24px;font-weight:700}
+
+/* Services */
+.services{background:var(--soft)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.svc{background:#fff;border-radius:20px;padding:30px 26px;box-shadow:0 8px 24px rgba(76,29,149,.06);transition:.3s;border-top:4px solid var(--gold)}
+.svc:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(109,40,217,.15)}
+.svc .ic{width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-dark));display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:16px;border:3px solid var(--gold)}
+.svc h3{font-size:1.15rem;margin-bottom:6px;color:var(--primary-dark)}
+.svc p{color:var(--muted);font-size:.95rem}
+
+/* Slogan */
+.slogan{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:#fff;text-align:center;padding:46px 0}
+.slogan p{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;color:var(--gold)}
+.slogan small{font-size:1rem;opacity:.92}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+.info-item{display:flex;gap:14px;align-items:flex-start;background:#fff;padding:18px;border-radius:16px;margin-bottom:14px;box-shadow:0 4px 14px rgba(76,29,149,.07)}
+.info-item .ic{width:46px;height:46px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.info-item h4{color:var(--primary-dark);font-size:1rem}
+.info-item p,.info-item a{color:var(--muted);font-size:.93rem}
+.info-item a:hover{color:var(--primary)}
+form{background:#fff;border-radius:22px;padding:30px;box-shadow:0 14px 40px rgba(76,29,149,.12)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form input,form select,form textarea{width:100%;padding:13px 16px;border:1.5px solid #e2d9f0;border-radius:12px;font-family:inherit;font-size:.95rem;margin-bottom:14px;outline:none;background:#fcfbfe}
+form input:focus,form select:focus,form textarea:focus{border-color:var(--primary)}
+form textarea{resize:vertical;min-height:100px}
+form .btn{width:100%;justify-content:center;background:#25d366;color:#fff;box-shadow:0 8px 22px rgba(37,211,102,.35)}
+
+/* Footer */
+footer{background:#1e0a3c;color:#c9b8e8;padding:36px 0;text-align:center;font-size:.9rem}
+footer b{color:#fff}
+.foot-logo{width:70px;height:70px;object-fit:contain;background:#fff;border-radius:14px;padding:4px;margin:0 auto 10px}
+.socials{margin:12px 0;display:flex;justify-content:center;gap:12px}
+.socials a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:.25s}
+.socials a:hover{background:var(--gold);transform:translateY(-4px)}
+
+/* WhatsApp float */
+.wa-float{position:fixed;bottom:22px;left:22px;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.45);z-index:99;transition:.25s}
+.wa-float:hover{transform:scale(1.1)}
+
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr}
+  .nav-links{position:fixed;top:78px;right:-100%;width:78%;height:100vh;background:#fff;flex-direction:column;padding:34px 26px;gap:20px;transition:.35s;box-shadow:-8px 0 30px rgba(0,0,0,.1);align-items:flex-start}
+  .nav-links.open{right:0}
+  .menu-toggle{display:block}
+}
+@media(max-width:520px){.f-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <img src="logo.png" alt="شعار مركز الطاهر بوشينة">
+      <div>مركز الطاهر بوشينة<small>للتعليم والتطوير والتدريب والاستشارات</small></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#services">خدماتنا</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+      <li><a href="tel:0550714359" class="cta-btn">📞 0550 71 43 59</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="القائمة">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-banner">
+      <img src="banner.jpg" alt="مركز الطاهر بوشينة للتعليم والتطوير والتدريب والاستشارات">
+    </div>
+    <div class="hero-text">
+      <h1>معًا نحقق <span>مستقبلاً أفضل</span></h1>
+      <p>تعليم .. تطوير .. تدريب .. استشارات</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn btn-main">اكتشف خدماتنا</a>
+        <a href="https://wa.me/213550714359" target="_blank" rel="noopener" class="btn btn-ghost">تواصل عبر واتساب</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="sec-title">
+      <span class="kicker">من نحن</span>
+      <h2>مركز الطاهر بوشينة</h2>
+    </div>
+    <div class="about-box">
+      <p>مركز الطاهر بوشينة للتعليم والتطوير والتدريب والاستشارات يرافق الأطفال واليافعين وأسرهم من خلال الدعم المدرسي، والأرطوفونيا وصعوبات التعلم، والاستشارات النفسية والتوجيه، وتعليم اللغات، والتكوين والتدريب وتنمية المهارات.</p>
+      <p style="margin-top:12px"><b style="color:var(--primary-dark)">من أجل جيل متعلّم .. مبدع .. واثق</b></p>
+      <div class="verse">﴿ وَقُل رَّبِّ زِدْنِي عِلْمًا ﴾ — طه: 114</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="sec-title">
+      <span class="kicker">خدماتنا</span>
+      <h2>ما نقدّمه لكم</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><div class="ic">📚</div><h3>التعليم والدعم المدرسي</h3><p>مرافقة التلاميذ في دراستهم وتقوية مستواهم الدراسي.</p></div>
+      <div class="svc"><div class="ic">🧠</div><h3>الاستشارات النفسية والتوجيه</h3><p>إرشاد نفسي وتوجيه للأطفال واليافعين والأسر.</p></div>
+      <div class="svc"><div class="ic">🗣️</div><h3>الأرطوفونيا وصعوبات التعلم</h3><p>التكفل بمشاكل النطق واللغة وصعوبات التعلم.</p></div>
+      <div class="svc"><div class="ic">🌍</div><h3>تعليم اللغات</h3><p>دروس لتعلم اللغات وتطوير مهارات التواصل لدى الأطفال واليافعين.</p></div>
+      <div class="svc"><div class="ic">👥</div><h3>التكوين والتدريب</h3><p>دورات تكوينية وورشات تدريبية.</p></div>
+      <div class="svc"><div class="ic">📈</div><h3>التطوير وتنمية المهارات</h3><p>برامج لتنمية القدرات والمهارات الشخصية.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="slogan">
+  <div class="container">
+    <p>من أجل جيل متعلّم .. مبدع .. واثق</p>
+    <small>للحجز والاستفسار اتصلوا بنا: 0550 71 43 59</small>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="container">
+    <div class="sec-title">
+      <span class="kicker">تواصل معنا</span>
+      <h2>احجز استشارتك الآن</h2>
+      <p>املأ النموذج وسيصلنا طلبك عبر واتساب، أو تواصل معنا مباشرة.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="info-item"><div class="ic">📍</div><div><h4>العنوان</h4><p>خرايسية، طريق الدويرة، مقابل متوسطة الشهيد محمد الفوضيل</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&query=متوسطة+الشهيد+محمد+الفوضيل+خرايسية" target="_blank" rel="noopener">عرض على الخريطة</a></p></div></div>
+        <div class="info-item"><div class="ic">📞</div><div><h4>الهاتف / واتساب</h4><p><a href="tel:0550714359" dir="ltr">0550 71 43 59</a></p></div></div>
+        <div class="info-item"><div class="ic">📘</div><div><h4>صفحتنا على فيسبوك</h4><p><a href="https://www.facebook.com/profile.php?id=61594624927652" target="_blank" rel="noopener">مركز الطاهر بوشينة</a></p></div></div>
+        <div class="info-item"><div class="ic">🕐</div><div><h4>المواعيد</h4><p>للحجز وتحديد المواعيد يرجى الاتصال بنا مسبقًا</p></div></div>
+      </div>
+
+      <form id="bookingForm">
+        <div class="f-row">
+          <input type="text" id="fName" placeholder="الاسم الكامل" required>
+          <input type="tel" id="fPhone" placeholder="رقم الهاتف" required>
+        </div>
+        <input type="text" id="fAge" placeholder="عمر الطفل (اختياري)">
+        <select id="fService" required>
+          <option value="">اختر الخدمة المطلوبة</option>
+          <option>التعليم والدعم المدرسي</option>
+          <option>الاستشارات النفسية والتوجيه</option>
+          <option>الأرطوفونيا وصعوبات التعلم</option>
+          <option>تعليم اللغات</option>
+          <option>التكوين والتدريب</option>
+          <option>التطوير وتنمية المهارات</option>
+        </select>
+        <textarea id="fMsg" placeholder="اكتب رسالتك أو استفسارك هنا..."></textarea>
+        <button type="submit" class="btn">إرسال الطلب عبر واتساب 💬</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="logo.png" alt="الشعار" class="foot-logo">
+    <p><b>مركز الطاهر بوشينة</b> للتعليم والتطوير والتدريب والاستشارات</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=61594624927652" target="_blank" rel="noopener" title="فيسبوك"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></a>
+      <a href="tel:0550714359" title="اتصال"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+      <a href="https://wa.me/213550714359" target="_blank" rel="noopener" title="واتساب"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.8-4.2-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.4.5c-.2.2-.3.4-.5.6-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 1c.3.1.5.2.6.3 0 .2 0 .5-.2.8z"/></svg></a>
+    </div>
+    <p>خرايسية، طريق الدويرة، مقابل متوسطة الشهيد محمد الفوضيل</p>
+    <p dir="ltr">0550 71 43 59</p>
+    <p style="margin-top:8px;opacity:.8">© 2026 جميع الحقوق محفوظة</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/213550714359" class="wa-float" target="_blank" rel="noopener" title="تواصل عبر واتساب" aria-label="واتساب">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.8-4.2-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.4.5c-.2.2-.3.4-.5.6-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 1c.3.1.5.2.6.3 0 .2 0 .5-.2.8z"/></svg>
+</a>
+
+<script>
+  // قائمة الهاتف
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // إرسال الطلب إلى واتساب
+  const WHATSAPP_NUMBER = "213550714359";
+  document.getElementById('bookingForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const text =
+      "طلب حجز جديد%0A" +
+      "الاسم: " + encodeURIComponent(fName.value) + "%0A" +
+      "الهاتف: " + encodeURIComponent(fPhone.value) + "%0A" +
+      "عمر الطفل: " + encodeURIComponent(fAge.value) + "%0A" +
+      "الخدمة: " + encodeURIComponent(fService.value) + "%0A" +
+      "ملاحظات: " + encodeURIComponent(fMsg.value);
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank");
+  });
+</script>
+</body>
+</html>
